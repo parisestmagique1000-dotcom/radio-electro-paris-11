@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Navigation from "./components/Navigation.tsx";
-import Player from "./components/Player.tsx";
+import Home from "./Home";
+import Club from "./Club";
+import Guest from "./Guest";
+import EmissionPage from "./EmissionPage";
+import StandalonePlayer from "./StandalonePlayer";
+
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState("home");

@@ -1,19 +1,18 @@
 {
-  "appName": "Radio Electro Paris",
-  "name": "Radio Electro Paris",
+  "settings": {
+    "appName": "Radio Electro Paris",
+    "socials": {
+      "instagram": "https://instagram.com/",
+      "facebook": "https://facebook.com/",
+      "tiktok": "https://tiktok.com/"
+    }
+  },
+
+  "stream": {
+    "url": "https://radioelec.radioca.st/stream"
+  },
 
   "program": [
-    {
-      "time": "18:00–20:00",
-      "title": "ON AIR LIVE",
-      "details": "Paris"
-    }
-  ],
-
-  "streams": [
-    {
-      "title": "Live",
-      "url": "https://radioelec.radioca.st/stream"
-    }
+    { "time": "18:00–20:00", "title": "ON AIR LIVE" }
   ]
 }

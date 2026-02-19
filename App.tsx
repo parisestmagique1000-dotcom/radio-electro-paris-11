@@ -2,14 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Player from './components/Player';
-const App: React.FC = () => {
-  return (
-    <>
-      <Navigation activeTab="home" setActiveTab={() => {}} appName="Radio Electro Paris" />
-      <Player />
-    </>
-  );
-};
+
 
 
 const App: React.FC = () => {

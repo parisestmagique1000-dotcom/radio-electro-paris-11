@@ -1,0 +1,6 @@
+{
+  "name": "Radio Electro Paris",
+  "short_name": "REP",
+  "description": "L'application officielle de la scène électro parisienne. Radio live et DJs locaux.",
+  "requestFramePermissions": []
+}

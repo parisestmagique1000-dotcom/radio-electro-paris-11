@@ -1,9 +1,19 @@
 {
+  "appName": "Radio Electro Paris",
   "name": "Radio Electro Paris",
+
+  "program": [
+    {
+      "time": "18:00–20:00",
+      "title": "ON AIR LIVE",
+      "details": "Paris"
+    }
+  ],
+
   "streams": [
     {
       "title": "Live",
-      "url": "https://stream.zeno.fm/xxxxx"
+      "url": "https://radioelec.radioca.st/stream"
     }
   ]
 }

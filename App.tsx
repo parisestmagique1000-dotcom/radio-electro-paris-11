@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import Navigation from './components/Navigation';
-import Player from './components/Player';
+import Navigation from './components/Navigation.tsx';
+import Player from './components/Player.tsx';
 
 
 

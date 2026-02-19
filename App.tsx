@@ -22,7 +22,16 @@ const App: React.FC = () => {
       .then(data => {
         setSiteData(data);
         setLoading(false);
-      })
+      }).then(data => {
+  console.log("SITE JSON:", data);
+  setSiteData(data);
+  setLoading(false);
+})
+.catch(err => {
+  console.error("FETCH ERROR:", err);
+  setLoading(false);
+});
+
       .catch(err => {
         console.error("JSON Error", err);
         setLoading(false);

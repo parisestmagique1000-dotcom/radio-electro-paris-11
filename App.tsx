@@ -2,11 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Player from './components/Player';
-import Home from './pages/Home';
-import Club from './pages/Club';
-import Guest from './pages/Guest';
-import StandalonePlayer from './pages/StandalonePlayer';
-import EmissionPage from './pages/EmissionPage';
+const App: React.FC = () => {
+  return (
+    <>
+      <Navigation activeTab="home" setActiveTab={() => {}} appName="Radio Electro Paris" />
+      <Player />
+    </>
+  );
+};
+
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('home');

@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { STREAM_URL, EiffelIcon, PopoutIcon } from '../constants';
 
@@ -69,18 +70,7 @@ const Player: React.FC<{ appName: string }> = ({ appName }) => {
       channelRef.current?.close();
     };
   }, []);
-useEffect(() => {
-  const id = "centova-streaminfo";
 
-  if (document.getElementById(id)) return;
-
-  const script = document.createElement("script");
-  script.id = id;
-  script.src = "https://philae.shoutca.st:8430/system/streaminfo.js";
-  script.async = true;
-
-  document.body.appendChild(script);
-}, []);
   const handleVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = parseFloat(e.target.value);
     setVolume(v);
@@ -94,34 +84,12 @@ useEffect(() => {
     window.open(window.location.origin + window.location.pathname + '?mode=player', 'REP_Player', `width=${w},height=${h},left=${l},top=${t},status=no`);
     setPopupActive(true);
   };
-<div className="absolute inset-0 -z-10 overflow-hidden">
-  <div
-    className={`absolute inset-0 scale-110 blur-3xl opacity-25 ${
-      isPlaying ? "animate-pulse" : ""
-    }`}
-    style={{
-      backgroundImage: `url(${coverSrc})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center"
-    }}
-  />
-  <div className="absolute inset-0 bg-black/75" />
-</div>
+
   return (
     <div className="w-full border-y border-white/5 bg-black/90 sticky top-0 z-[60] backdrop-blur-xl shadow-2xl">
       <audio ref={audioRef} preload="none" crossOrigin="anonymous" />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-5">
         <div className="flex items-center justify-between gap-4">
-          <img
-  className="cc_streaminfo w-[72px] h-[72px] rounded-2xl object-cover border border-white/10"
-  data-type="trackimageurl"
-  data-username="radioelec"
-  alt="cover"
-  onLoad={(e) => {
-    const src = e.currentTarget.currentSrc || e.currentTarget.src;
-    if (src) setCoverSrc(src);
-  }}
-/>
           <div className="flex items-center gap-5 flex-1 min-w-0">
             <button 
               onClick={togglePlay}

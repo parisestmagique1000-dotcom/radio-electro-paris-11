@@ -7,9 +7,6 @@ const Player: React.FC<{ appName: string }> = ({ appName }) => {
   const [popupActive, setPopupActive] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const channelRef = useRef<BroadcastChannel | null>(null);
-  const [coverSrc, setCoverSrc] = useState(
-  "https://i.postimg.cc/FKXmZXkt/cb4ad0-41d2ca721e9a46fd825dc25a4e2c8a97-mv2-png.avif"
-);
   const autoplayAttempted = useRef(false);
 
   const syncMediaSession = (active: boolean) => {
